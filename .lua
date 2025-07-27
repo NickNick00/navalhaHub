@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "NavalhaHub",
-   Icon = "rbxassetid://1000045205", -- ou assetId válido em string
+   Icon = "rbxassetid://1000045205", "rbxassetid://1000045205", -- ou assetId válido em string
    LoadingTitle = "NavalhaHub",
    LoadingSubtitle = "by kyuzzy",
    Theme = "Default",
