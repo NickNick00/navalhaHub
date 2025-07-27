@@ -35,8 +35,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local AuraHub = Window:CreateTab("Navalha Hub", 4483362458)
-local Farm = Window:CreateTab("Farm", 4483362458)
+local AuraHub = Window:CreateTab("Navalha Hub", 1000045205)
+local Farm = Window:CreateTab("Farm", 1000045206)
 
 local SectionMain = AuraHub:CreateSection("Funções Principais")
 
