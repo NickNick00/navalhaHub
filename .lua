@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "NavalhaHub",
    LoadingSubtitle = "by kyuzzy",
    Theme = "Default",
-   ToggleUIKeybind = "",
+   ToggleUIKeybind = "K",
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false,
