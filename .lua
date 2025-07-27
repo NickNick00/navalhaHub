@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "NavalhaHub",
-   Icon = nil, -- ou assetId válido em string
+   Icon = nil , -- ou assetId válido em string
    LoadingTitle = "NavalhaHub",
    LoadingSubtitle = "by kyuzzy",
    Theme = "Default",
@@ -35,8 +35,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local AuraHub = Window:CreateTab("Navalha Hub", "rbxassetid://1000045206")
-local Farm = Window:CreateTab("Farm", "rbxassetid://1000045205")
+local AuraHub = Window:CreateTab("Navalha Hub", "4483362458")
+local Farm = Window:CreateTab("Farm", "4483362458")
 
 local SectionMain = AuraHub:CreateSection("Funções Principais")
 
