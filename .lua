@@ -2,7 +2,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "NavalhaHub",
-   Icon = nil , -- ou assetId válido em string
+   Icon = nil, -- ou assetId válido em string
    LoadingTitle = "NavalhaHub",
    LoadingSubtitle = "by kyuzzy",
    Theme = "Default",
@@ -31,14 +31,15 @@ local Window = Rayfield:CreateWindow({
       FileName = "Key",
       SaveKey = true,
       GrabKeyFromSite = false,
-      Key = {"kyu", "Navalha", "k"}
+      Key = {"kyukk", "Navalha", "k"}
    }
 })
 
-local AuraHub = Window:CreateTab("Navalha Hub", "4483362458")
-local Farm = Window:CreateTab("Farm", "4483362458")
+local NavalhaHub = Window:CreateTab("Navalha Hub", 4483362458)
+local Visuals = Window:CreateTab("Visuals", 4483362458)
+local Combat = Window:CreateTab("Combat", 4483362458)
+local SectionMain = NavalhaHub:CreateSection("Funções Principais")
 
-local SectionMain = AuraHub:CreateSection("Funções Principais")
 
 local function MatarJogador()
    local player = game.Players.LocalPlayer
@@ -47,27 +48,13 @@ local function MatarJogador()
    end
 end
 
-local ButtonKill = Farm:CreateButton({
+local ButtonKill = Combat:CreateButton({
    Name = "Matar Jogador",
    Callback = MatarJogador
 })
 
-local ToggleFlash = AuraHub:CreateToggle({
-   Name = "Flash",
-   CurrentValue = false,
-   Callback = function(Value)
-      local player = game.Players.LocalPlayer
-      if player and player.Character and player.Character:FindFirstChild("Humanoid") then
-         if Value then
-            player.Character.Humanoid.WalkSpeed = 50
-         else
-            player.Character.Humanoid.WalkSpeed = 16
-         end
-      end
-   end
-})
 
-local SliderJump = Farm:CreateSlider({
+local SliderJump = Combat:CreateSlider({
    Name = "Pulo (JumpPower)",
    Range = {0, 100},
    Increment = 1,
@@ -81,9 +68,9 @@ local SliderJump = Farm:CreateSlider({
    end
 })
 
-local SectionNPC = Farm:CreateSection("NPCs")
+local SectionNPC = Combat:CreateSection("NPCs")
 
-local InputNPC = Farm:CreateInput({
+local InputNPC = Combat:CreateInput({
    Name = "Nome do NPC",
    PlaceholderText = "Digite um NPC...",
    RemoveTextAfterFocusLost = false,
@@ -92,7 +79,7 @@ local InputNPC = Farm:CreateInput({
    end
 })
 
-local DropdownNPC = Farm:CreateDropdown({
+local DropdownNPC = Combat:CreateDropdown({
    Name = "Selecionar NPC",
    Options = {"Npc 1", "Npc 2", "Npc 3"},
    CurrentOption = "Npc 1",
@@ -101,9 +88,9 @@ local DropdownNPC = Farm:CreateDropdown({
    end
 })
 
-local SectionExtra = Farm:CreateSection("Extras")
+local SectionExtra = NavalhaHub:CreateSection("Extras")
 
-local KeybindExample = Farm:CreateKeybind({
+local KeybindExample = NavalhaHub:CreateKeybind({
    Name = "Atalho de Teclado",
    CurrentKeybind = "F",
    HoldToInteract = false,
@@ -112,7 +99,7 @@ local KeybindExample = Farm:CreateKeybind({
    end
 })
 
-local ParagraphCreator = Farm:CreateParagraph({
+local ParagraphCreator = NavalhaHub:CreateParagraph({
    Title = "Criador",
    Content = "NavalhaHub by kyuzzy"
 })
